@@ -48,10 +48,10 @@ components:
     cookieAuth:
       type: apiKey
       in: cookie
-      name: token
+      name: sample_token
       description: Cookieを利用
 tags:
   - name: user
-    description: ユーザー関連の処理
+    description: ユーザーに関する処理
   - name: book
-    description: 書籍関連の処理
+    description: 書籍に関する処理

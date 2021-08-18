@@ -25,9 +25,11 @@ requestBody:
           name:
             type: string
             description: ユーザー名
+            example: '山田太郎'
           email:
             type: string
             description: メールアドレス
+            example: 'sample@example.com'
           gender:
             type: string
             description: 性別

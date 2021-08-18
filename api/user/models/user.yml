@@ -13,7 +13,7 @@ properties:
   email:
     type: string
     description: メールアドレス
-    example: 'test@example.com'
+    example: 'sample@example.com'
   gender:
     type: string
     description: 性別

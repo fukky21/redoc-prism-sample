@@ -1,0 +1,32 @@
+title: User
+type: object
+description: ユーザー情報
+properties:
+  id:
+    type: string
+    description: ユーザーID
+    example: '1'
+  name:
+    type: string
+    description: ユーザー名
+    example: '山田太郎'
+  email:
+    type: string
+    description: メールアドレス
+    example: 'test@example.com'
+  gender:
+    type: string
+    description: 性別
+    nullable: true
+    enum:
+      - male
+      - famale
+      - other
+  createdAt:
+    type: string
+    description: 作成日時
+    example: '2021-01-01T09:00:00+09:00'
+  updatedAt:
+    type: string
+    description: 更新日時
+    example: '2021-01-01T09:00:00+09:00'

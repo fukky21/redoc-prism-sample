@@ -1,0 +1,57 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Sample API
+  license:
+    name: MIT
+  contact:
+    name: "API Support"
+    url: "https://example.com"
+  description: Redoc × Prism のサンプルです。
+servers:
+  - url: 'https://dev-example.jp'
+    description: '開発環境APIサーバー'
+  - url: 'https://prd-example.jp'
+    description: '本番環境APIサーバー'
+paths:
+  '/v1/users':
+    get:
+      $ref: ./user/paths/getUsers.yml
+    post:
+      $ref: ./user/paths/addUser.yml
+  '/v1/users/{userId}':
+    parameters:
+      - schema:
+          type: string
+        name: userId
+        in: path
+        required: true
+        description: ユーザーID
+    get:
+      $ref: ./user/paths/getUser.yml
+  '/v1/books':
+    get:
+      security:
+        - cookieAuth: []
+      $ref: ./book/paths/getBooks.yml
+components:
+  schemas:
+    User:
+      $ref: ./user/models/user.yml
+    Book:
+      $ref: ./book/models/book.yml
+    Success:
+      $ref: ./common/models/success.yml
+    Error:
+      $ref: ./common/models/error.yml
+  securitySchemes:
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: token
+      description: Cookieを利用
+tags:
+  - name: user
+    description: ユーザー関連の処理
+  - name: book
+    description: 書籍関連の処理

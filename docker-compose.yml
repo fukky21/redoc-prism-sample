@@ -1,0 +1,10 @@
+version: '3'
+services:
+  doc:
+    image: redocly/redoc
+    volumes:
+      - ./api:/usr/share/nginx/html/api
+    environment:
+      SPEC_URL: api/swagger.yml
+    ports:
+      - 8080:80

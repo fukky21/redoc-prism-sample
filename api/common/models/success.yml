@@ -1,0 +1,7 @@
+title: Success
+type: object
+properties:
+  message:
+    type: string
+    description: 成功メッセージ
+    example: 'success'

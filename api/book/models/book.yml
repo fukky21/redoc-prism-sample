@@ -1,0 +1,20 @@
+title: Book
+type: object
+description: 書籍情報
+properties:
+  id:
+    type: string
+    description: 書籍ID
+    example: '1'
+  title:
+    type: string
+    description: タイトル
+    example: 'Sample Book'
+  author:
+    type: string
+    description: 著者名
+    example: '山田太郎'
+  price:
+    type: integer
+    description: 価格
+    example: 800

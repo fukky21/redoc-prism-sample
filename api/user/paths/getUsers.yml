@@ -1,0 +1,14 @@
+summary: ユーザー一覧を取得
+operationId: getUsers
+description: ユーザー一覧を取得する
+tags:
+  - user
+responses:
+  '200':
+    description: 成功
+    content:
+      application/json:
+       schema:
+        type: array
+        items:
+          $ref: '../models/user.yml'

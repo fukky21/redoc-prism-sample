@@ -1,0 +1,40 @@
+summary: ユーザーを追加
+operationId: addUser
+description: ユーザーを追加する
+tags:
+  - user
+responses:
+  '200':
+    description: 成功
+    content:
+      application/json:
+        schema:
+          $ref: '../../common/models/success.yml'
+  '400':
+    description: 入力項目に不備があった場合
+    content:
+      application/json:
+        schema:
+          $ref: '../../common/models/error.yml'
+requestBody:
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          name:
+            type: string
+            description: ユーザー名
+          email:
+            type: string
+            description: メールアドレス
+          gender:
+            type: string
+            description: 性別
+            enum:
+              - male
+              - famale
+              - other
+        required:
+          - name
+          - email

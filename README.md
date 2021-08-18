@@ -5,8 +5,12 @@
 $ docker-compose up
 ```
 
-## コンテナ内部に入って作業する
+## Usage
+### API仕様を確認する
+http://0.0.0.0:8080/ にアクセス
+
+### Mockを使用する
 ```bash
-# redocly/redoc
-$ docker exec -it redoc-prism-sample_doc_1 sh
+# 例: ユーザー一覧を取得する
+$ curl -X GET -H "Content-Type: application/json" 'http://0.0.0.0:4010/v1/users'
 ```

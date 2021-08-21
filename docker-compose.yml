@@ -5,7 +5,7 @@ services:
     volumes:
       - ./api:/usr/share/nginx/html/api
     environment:
-      SPEC_URL: api/swagger.yml
+      SPEC_URL: api/specification.yml
     ports:
       - 8080:80
   mock:
@@ -13,6 +13,6 @@ services:
     volumes:
       - ./api:/api
     command: >
-      mock -h 0.0.0.0 /api/swagger.yml
+      mock -h 0.0.0.0 /api/specification.yml
     ports:
       - 4010:4010

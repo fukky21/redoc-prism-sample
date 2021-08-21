@@ -1,4 +1,7 @@
 # redoc-prism-sample
+Docker × ReDoc × PrismでAPI開発環境を構築するサンプルコードです。
+
+解説記事は[こちら](https://qiita.com/fukky21/items/299126f6fa3d343eed22)
 
 ## Setup
 ```bash
